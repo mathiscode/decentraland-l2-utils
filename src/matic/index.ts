@@ -78,12 +78,14 @@ export async function getContract(
 export async function balance(
   address?: string,
   network: string = 'mainnet',
-  providerType: string = 'WebSocketProvider',
-  providerEndpoint: string = 'wss://rpc-mainnet.matic.network',
-  testnetProviderType: string = 'WebSocketProvider',
-  testnetProviderEndpoint: string = 'wss://rpc-mumbai.matic.today'
+  providerType: string = 'HTTPProvider',
+  providerEndpoint: string = 'https://polygon-rpc.com',
+  testnetProviderType: string = 'HTTPProvider',
+  testnetProviderEndpoint: string = 'https://rpc-mumbai.matic.today'
 ) {
   const fromAddress = address || (await getUserAccount())
+
+  log({ fromAddress })
 
   return Promise.all([
     getContract(addresses[network].l1Token).then(async ({ contract }) => {
@@ -167,10 +169,10 @@ export async function sendMana(
   to: string,
   amount: number,
   network: string = 'mainnet',
-  providerType: string = 'WebSocketProvider',
-  providerEndpoint: string = 'wss://rpc-mainnet.matic.network',
-  testnetProviderType: string = 'WebSocketProvider',
-  testnetProviderEndpoint: string = 'wss://rpc-mumbai.matic.today'
+  providerType: string = 'HTTPProvder',
+  providerEndpoint: string = 'https://polygon-rpc.com',
+  testnetProviderType: string = 'HTTPProvder',
+  testnetProviderEndpoint: string = 'https://rpc-mumbai.matic.today'
 ) {
   return new Promise(async (resolve, reject) => {
     const fromAddress = await getUserAccount()

@@ -1,6 +1,6 @@
 {
   "name": "@dcl/l2-scene-utils",
-  "version": "1.0.7-fix-provider-endpoints",
+  "version": "1.0.7-default-endpoint-http",
   "description": "A collection of helpers to make it easier to build a Decentraland scene using the SDK.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
