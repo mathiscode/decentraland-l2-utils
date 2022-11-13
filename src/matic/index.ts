@@ -85,8 +85,6 @@ export async function balance(
 ) {
   const fromAddress = address || (await getUserAccount())
 
-  log({ fromAddress })
-
   return Promise.all([
     getContract(addresses[network].l1Token).then(async ({ contract }) => {
       const balance = await contract.balanceOf(fromAddress)
