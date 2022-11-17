@@ -167,9 +167,9 @@ export async function sendMana(
   to: string,
   amount: number,
   network: string = 'mainnet',
-  providerType: string = 'HTTPProvder',
+  providerType: string = 'HTTPProvider',
   providerEndpoint: string = 'https://polygon-rpc.com',
-  testnetProviderType: string = 'HTTPProvder',
+  testnetProviderType: string = 'HTTPProvider',
   testnetProviderEndpoint: string = 'https://rpc-mumbai.matic.today',
   metaTxServer: string = 'https://l2.dcl.guru/'
 ) {
