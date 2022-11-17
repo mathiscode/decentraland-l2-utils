@@ -170,7 +170,8 @@ export async function sendMana(
   providerType: string = 'HTTPProvder',
   providerEndpoint: string = 'https://polygon-rpc.com',
   testnetProviderType: string = 'HTTPProvder',
-  testnetProviderEndpoint: string = 'https://rpc-mumbai.matic.today'
+  testnetProviderEndpoint: string = 'https://rpc-mumbai.matic.today',
+  metaTxServer: string = 'https://l2.dcl.guru/'
 ) {
   return new Promise(async (resolve, reject) => {
     const fromAddress = await getUserAccount()
@@ -236,7 +237,7 @@ export async function sendMana(
           const s = '0x' + signature.substring(64, 128)
           const v = '0x' + signature.substring(128, 130)
 
-          await fetch('https://l2.dcl.guru/', {
+          await fetch(metaTxServer, {
             headers: {
               'content-type': 'application/json'
             },
