@@ -81,7 +81,7 @@ export async function balance(
   providerType: string = 'HTTPProvider',
   providerEndpoint: string = 'https://polygon-rpc.com',
   testnetProviderType: string = 'HTTPProvider',
-  testnetProviderEndpoint: string = 'https://rpc-mumbai.maticvigil.com'
+  testnetProviderEndpoint: string = 'https://polygon-mumbai.chainstacklabs.com'
 ) {
   const fromAddress = address || (await getUserAccount())
 
@@ -170,7 +170,7 @@ export async function sendMana(
   providerType: string = 'HTTPProvider',
   providerEndpoint: string = 'https://polygon-rpc.com',
   testnetProviderType: string = 'HTTPProvider',
-  testnetProviderEndpoint: string = 'https://rpc-mumbai.maticvigil.com',
+  testnetProviderEndpoint: string = 'https://polygon-mumbai.chainstacklabs.com',
   metaTxServer: string = 'https://l2.dcl.guru/'
 ) {
   return new Promise(async (resolve, reject) => {
