@@ -7,7 +7,7 @@
   "decentralandLibrary": {},
   "scripts": {
     "semantic-release": "semantic-release",
-    "build": "rollup -c --environment BUILD:production",
+    "build": "npx rollup -c --environment BUILD:production",
     "build-ecs": "build-ecs",
     "postinstall": "npm run build"
   },
